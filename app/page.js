@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Contacts from "@/components/Contacts";
+import About from "@/components/About";
 
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       <div className="mt-20">
         <Header />
           <Contacts />
+          <About />
       </div>
     </main>
   );
