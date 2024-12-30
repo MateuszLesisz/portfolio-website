@@ -1,5 +1,5 @@
 const data = {
-    image: null,
+    image: "/images/photo.jpg",
     name: "Mateusz Lesisz",
     jobTitle: "Java Developer",
     address: "Warsaw, Poland",
