@@ -14,7 +14,8 @@ export default function RootLayout({ children }) {
       <body>
         <Theme>
           <DarkLight />
-          {children}</Theme>
+          {children}
+        </Theme>
       </body>
     </html>
   );
