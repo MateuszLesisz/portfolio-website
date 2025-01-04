@@ -2,6 +2,7 @@ import SectionWrapper from "@/components/SectionWrapper";
 import Heading from "@/components/Heading";
 import data from "@/data/work";
 import Image from "next/image";
+import SkillComponent from "@/components/SkillComponent";
 
 const WorkHistory = () => {
     return (
@@ -22,10 +23,28 @@ const WorkHistory = () => {
                         <h2 className="text-black dark:text-white capitalize font-bold text-base">
                             {work.role}
                         </h2>
-                        <span className="capitalize text-sm font-bold text-zinc-500">{work.company}</span>
+                        <span className="capitalize text-sm font-bold text-zinc-500">
+                            {work.company}
+                        </span>
+                        <div className="flex items-center gap-x-1 ">
+                            <span className="text-black dark:text-white capitalize text-sm font-bold mt-[2px]">
+                                {work.type}
+                            </span>
+                            <span className="text-black dark:text-white capitalize text-sm font-bold mt-[2px]">
+                                -
+                            </span>
+                            <span className="text-black dark:text-white capitalize text-sm font-bold mt-[2px]">
+                                {work.date}
+                            </span>
+                        </div>
+                        {work.skills && <div className="flex gap-2 flex-wrap my-2">
+                            {work?.skills?.map(skill => (
+                                <SkillComponent skill={skill} key={skill.id}/>
+                            ))}
+                        </div>}
                     </div>
                 </div>
-                ))}
+            ))}
         </SectionWrapper>
     )
 }

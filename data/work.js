@@ -43,7 +43,7 @@ const data = [
             {id: 4, name: "MySql", image: "/skills/mysql.png"},
             {id: 5, name: "Maven", image: "/skills/maven.png"},
             {id: 6, name: "JUnit", image: "/skills/junit.png"},
-            {id: 7, name: "Mockito", image: "/skills/mockito.jpg"},
+            {id: 7, name: "Mockito", image: "/skills/mockito.png"},
             {id: 8, name: "Gitlab", image: "/skills/gitlab.png"},
             {id: 9, name: "Git", image: "/skills/git.png"},
             {id: 10, name: "Jira", image: "/skills/jira.png"},
