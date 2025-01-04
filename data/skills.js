@@ -14,7 +14,7 @@ const data = [
     {id: 13, name: "jwt", image: "/skills/JWT.png"},
     {id: 14, name: "mysql", image: "/skills/mysql.png"},
     {id: 15, name: "postgres", image: "/skills/postgres.png"},
-    {id: 16, name: "seaweed", image: "/skills/seaweed.png"},
+    {id: 16, name: "seaweedFS", image: "/skills/seaweed.png"},
     {id: 17, name: "git", image: "/skills/git.png"},
     {id: 18, name: "bitbucket", image: "/skills/bitbucket.png"},
     {id: 19, name: "gitlab", image: "/skills/gitlab.png"},
