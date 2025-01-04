@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Contacts from "@/components/Contacts";
 import About from "@/components/About";
 import Skills from "@/components/skills";
+import WorkHistory from "@/components/WorkHistory";
 
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
           <Contacts />
           <About />
           <Skills />
+          <WorkHistory />
       </div>
     </main>
   );
