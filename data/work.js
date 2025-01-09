@@ -105,6 +105,8 @@ const data = [
                         ],
                     }
                 ]
+
+
             }
         ]
     },
@@ -130,7 +132,31 @@ const data = [
             {id: 12, name: "Postman", image: "/skills/postman.png"},
         ],
         projects: [
-            {id: 1, name: "SmartSearch", description: "SmartSearch description"},
+            {
+                id: 1,
+                name: "SmartSearch",
+                description: "SmartSearch is an advanced search tool." +
+                    " It enables efficient and intuitive data and information retrieval in complex environments." +
+                    " It collects data from all company systems (documents, people, files, research) and allows searching and filtering of information. ",
+                keyResponsibilities: [
+                    {
+                        project: [
+                            {
+                                info: "Implementation of search profile creation"
+                            },
+                            {
+                                info: "Implementation of user profile creation"
+                            },
+                            {
+                                info: "Bug fixes"
+                            },
+                            {
+                                info: "Implementation a system for monitoring the status of indexed files"
+                            },
+                        ],
+                    }
+                ]
+            },
         ]
     }
 ]
