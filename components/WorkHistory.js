@@ -12,6 +12,7 @@ const WorkHistory = () => {
             </Heading>
             {data.map((work) => (
                 <div className="mt-6 flex gap-x-6" key={work.id}>
+
                     {/* Company Logo */}
                     <div
                         className="relative w-[50px] h-[50px] rounded-full overflow-hidden border dark:border-zinc-700">
@@ -50,7 +51,7 @@ const WorkHistory = () => {
                             </div>
                         )}
 
-                        {/* Projekty */}
+                        {/* Projects */}
                         {work.projects && (
                             <div className="mt-4">
                                 <h3 className="text-black dark:text-white capitalize font-bold text-base">
@@ -59,11 +60,11 @@ const WorkHistory = () => {
                                 <div className="flex flex-col gap-4">
                                     {work.projects.map((project) => (
                                         <div key={project.id}>
-                                            {/* Nazwa projektu */}
+                                            {/* Projects name */}
                                             <h4 className="text-black dark:text-white font-bold text-lg">
                                                 {project.name}
                                             </h4>
-                                            {/* Opis projektu */}
+                                            {/* Projects descu */}
                                             <p className="text-black dark:text-zinc-400 text-sm mt-1">
                                                 {project.name === "betterjobs.it" ? (
                                                     (() => {
@@ -89,7 +90,7 @@ const WorkHistory = () => {
                                                     project.description
                                                 )}
                                             </p>
-                                            {/* Kluczowe odpowiedzialności */}
+                                            {/* Key responsibilities */}
                                             {project.keyResponsibilities && (
                                                 <div className="mt-4">
                                                     <h5 className="text-black dark:text-white font-bold text-sm mb-2">
