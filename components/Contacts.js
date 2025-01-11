@@ -51,9 +51,9 @@ const Contacts = () => {
                             href={contact.link}
                             key={contact.id}
                             target="_blank"
-                            className="flex items-center space-x-2 bg-zinc-100 dark:bg-zinc-800 px-3 py-2">
+                            className="flex items-center space-x-2 bg-zinc-100 dark:bg-zinc-800 px-3 py-2 hover:text-black hover:dark:text:white">
                             {contact.name === 'github' && <FaGithub size={18} className="text-black dark:text-white" />}
-                            {contact.name === 'linkedin' && <FaLinkedin size={18} className="text-[#0a66c2] dark:text-white" />}
+                            {contact.name === 'linkedin' && <FaLinkedin size={18} className="text-black dark:text-white" />}
                             {contact.name === 'email' && <MdEmail size={18} className="text-black dark:text-white" />}
                             <span className="text-sm md:text-base capitalize text-zinc-700 dark:text-white font-bold">
                                 {contact.label}
