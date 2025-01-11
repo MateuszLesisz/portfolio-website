@@ -9,7 +9,7 @@ const data = [
             " The website was built using NodeJS 14 and Tailwind CSS.",
         skills: [
             {id: 1, name: "JS", image: "/skills/javascript.png",},
-            { id: 2, name: "NodeJS", image: "/skills/NodeJS.png"},
+            { id: 2, name: "NodeJS", image: "/skillsa/NodeJS.png"},
             { id: 3, name: "TailwindCSS", image: "/skills/TailwindCSS.png"}
         ],
         source_code: "https://github.com/MateuszLesisz/portfolio-website",
