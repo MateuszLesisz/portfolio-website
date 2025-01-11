@@ -4,6 +4,8 @@ import data from "@/data/work";
 import SkillComponent from "@/components/SkillComponent";
 import CompanyLogo from "@/components/work_history_components/CompanyLogo";
 import JobInformation from "@/components/work_history_components/JobInformation";
+import KeyResponsibilities from "@/components/work_history_components/KeyResponsibilities";
+import ProjectDescription from "@/components/work_history_components/ProjectDescription";
 
 const WorkHistory = () => {
     return (
@@ -51,57 +53,11 @@ const WorkHistory = () => {
                                             <h4 className="text-black dark:text-white font-bold text-lg">
                                                 {project.name}
                                             </h4>
-                                            {/* Projects descu */}
-                                            <p className="text-black dark:text-zinc-400 text-sm mt-1">
-                                                {project.name === "betterjobs.it" ? (
-                                                    (() => {
-                                                        const parts = project.description.split("betterjobs.it");
-                                                        const lastPartIndex = parts.length - 1;
-
-                                                        return (
-                                                            <>
-                                                                {parts.slice(0, lastPartIndex).join("betterjobs.it")}
-                                                                <a
-                                                                    href="https://betterjobs.it"
-                                                                    target="_blank"
-                                                                    rel="noopener noreferrer"
-                                                                    className="text-blue-500 hover:underline"
-                                                                >
-                                                                    betterjobs.it
-                                                                </a>
-                                                                {parts[lastPartIndex]}
-                                                            </>
-                                                        );
-                                                    })()
-                                                ) : (
-                                                    project.description
-                                                )}
-                                            </p>
+                                            {/* Projects desc */}
+                                                <ProjectDescription name={project.name} description={project.description} />
                                             {/* Key responsibilities */}
                                             {project.keyResponsibilities && (
-                                                <div className="mt-4">
-                                                    <h5 className="text-black dark:text-white font-bold text-sm mb-2">
-                                                        Key Responsibilities:
-                                                    </h5>
-                                                    <ul className="list-disc list-inside text-black dark:text-zinc-400 text-sm space-y-2">
-                                                        {project.keyResponsibilities[0].project.map((task, idx) => (
-                                                            <li key={idx}>
-                                                                {task.info}
-                                                                {task.desc && (
-                                                                    <ul className="list-none ml-4 space-y-2 mt-2">
-                                                                        {task.desc.map((subTask, subIdx) => (
-                                                                            <li key={subIdx}>
-                                                        <span className="before:content-['-'] before:mr-2">
-                                                            {subTask.info}
-                                                        </span>
-                                                                            </li>
-                                                                        ))}
-                                                                    </ul>
-                                                                )}
-                                                            </li>
-                                                        ))}
-                                                    </ul>
-                                                </div>
+                                                <KeyResponsibilities keyResponsibilities={project.keyResponsibilities} />
                                             )}
                                         </div>
                                     ))}
