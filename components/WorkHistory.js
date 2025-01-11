@@ -1,8 +1,8 @@
 import SectionWrapper from "@/components/SectionWrapper";
 import Heading from "@/components/Heading";
 import data from "@/data/work";
-import Image from "next/image";
 import SkillComponent from "@/components/SkillComponent";
+import CompanyLogo from "@/components/work_history_components/CompanyLogo";
 
 const WorkHistory = () => {
     return (
@@ -14,15 +14,10 @@ const WorkHistory = () => {
                 <div className="mt-6 flex gap-x-6" key={work.id}>
 
                     {/* Company Logo */}
-                    <div
-                        className="relative w-[50px] h-[50px] rounded-full overflow-hidden border dark:border-zinc-700">
-                        <Image
-                            src={work.image}
-                            fill
-                            className="w-full h-full object-cover"
-                            alt={`Icon for ${work.company}`}
-                        />
-                    </div>
+                    <CompanyLogo
+                        src={work.image}
+                        alt={`Icon for ${work.company}`}
+                    />
 
                     {/* Job information */}
                     <div className="flex-1">
