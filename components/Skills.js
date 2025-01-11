@@ -1,17 +1,18 @@
+import Heading from "@/components/Heading";
+import SectionWrapper from "@/components/SectionWrapper";
+import data from "@/data/skills";
 import SkillComponent from "@/components/SkillComponent";
 
-const Skills = ({ skills, className }) => {
-    if (!skills || skills.length === 0) {
-        return null;
-    }
-
+const Skills = () => {
     return (
-        <div className={`flex gap-2 flex-wrap my-2 ${className}`}>
-            {skills.map(skill => (
-                <SkillComponent skill={skill} key={skill.id} />
-            ))}
-        </div>
-    );
-};
-
+        <SectionWrapper>
+        <Heading>Skills</Heading>
+            <div className="flex flex-wrap items-center gap-5">
+                {data.map(skill => (
+                    <SkillComponent skill={skill} key={skill.id}/>
+                ))}
+            </div>
+        </SectionWrapper>
+    )
+}
 export default Skills;
