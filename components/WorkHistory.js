@@ -3,6 +3,7 @@ import Heading from "@/components/Heading";
 import data from "@/data/work";
 import SkillComponent from "@/components/SkillComponent";
 import CompanyLogo from "@/components/work_history_components/CompanyLogo";
+import JobInformation from "@/components/work_history_components/JobInformation";
 
 const WorkHistory = () => {
     return (
@@ -21,21 +22,12 @@ const WorkHistory = () => {
 
                     {/* Job information */}
                     <div className="flex-1">
-                        <h2 className="text-black dark:text-white capitalize font-bold text-base">
-                            {work.role}
-                        </h2>
-                        <span className="capitalize text-sm font-bold text-zinc-500">
-                            {work.company}
-                        </span>
-                        <div className="flex items-center gap-x-1">
-                            <span className="text-black dark:text-white capitalize text-sm font-bold mt-[2px]">
-                                {work.type}
-                            </span>
-                            <span className="text-black dark:text-white capitalize text-sm font-bold mt-[2px]"></span>
-                            <span className="text-black dark:text-white capitalize text-sm font-bold mt-[2px]">
-                                {work.date}
-                            </span>
-                        </div>
+                        <JobInformation
+                            role={work.role}
+                            company={work.company}
+                            type={work.type}
+                            date={work.date}
+                        />
 
                         {/* Skills */}
                         {work.skills && (
