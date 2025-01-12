@@ -4,6 +4,7 @@ import About from "@/components/About";
 import Skills from "@/components/skills";
 import WorkHistory from "@/components/WorkHistory";
 import Projects from "@/components/Projects";
+import Certification from "@/components/Cerification";
 
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
           <Skills />
           <WorkHistory />
           <Projects />
+          <Certification />
       </div>
     </main>
   );

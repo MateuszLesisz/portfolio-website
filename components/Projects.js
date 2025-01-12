@@ -5,7 +5,7 @@ import Heading from "@/components/Heading";
 import data from "@/data/projects";
 import Image from "next/image";
 import { FaArrowTrendUp } from "react-icons/fa6";
-import Model from "@/components/Model";
+import ProjectsModel from "@/components/ProjectsModel";
 import {useState} from "react";
 
 const Projects = () => {
@@ -16,7 +16,7 @@ const Projects = () => {
     }
     return (
         <>
-            <Model state={state} details={details} toggleModel={toggleModel}/>
+            <ProjectsModel state={state} details={details} toggleModel={toggleModel}/>
             <SectionWrapper>
             <Heading>projects</Heading>
             {data.map((project) => (
@@ -46,7 +46,6 @@ const Projects = () => {
             ))}
         </SectionWrapper>
         </>
-
     )
 }
 export default Projects;
