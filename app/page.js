@@ -5,6 +5,7 @@ import Skills from "@/components/skills";
 import WorkHistory from "@/components/WorkHistory";
 import Projects from "@/components/Projects";
 import Certification from "@/components/Cerification";
+import Reviews from "@/components/Reviews";
 
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
           <WorkHistory />
           <Projects />
           <Certification />
+          <Reviews />
       </div>
     </main>
   );
