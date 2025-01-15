@@ -6,21 +6,26 @@ import WorkHistory from "@/components/WorkHistory";
 import Projects from "@/components/Projects";
 import Certification from "@/components/Cerification";
 import Reviews from "@/components/Reviews";
+import Footer from "@/components/Footer";
 
 
 export default function Home() {
   return (
-    <main className="max-w-screen-x1 w-full mx-auto px-4">
-      <div className="mt-20">
-        <Header />
-          <Contacts />
-          <About />
-          <Skills />
-          <WorkHistory />
-          <Projects />
-          <Certification />
-          <Reviews />
-      </div>
-    </main>
+      <>
+        <main className="max-w-screen-x1 w-full mx-auto px-4">
+          <div className="mt-20">
+            <Header/>
+            <Contacts/>
+            <About/>
+            <Skills/>
+            <WorkHistory/>
+            <Projects/>
+            <Certification/>
+            {/*<Reviews/>*/}
+          </div>
+        </main>
+        <Footer/>
+      </>
+
   );
 }
