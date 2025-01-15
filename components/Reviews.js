@@ -1,7 +1,9 @@
+"use client";
 import SectionWrapper from "@/components/SectionWrapper";
 import data from "@/data/reviews";
 import Heading from "@/components/Heading";
 import Image from "next/image";
+import Masonry from "react-masonry-css";
 
 const Reviews = () => {
     return (
@@ -18,7 +20,15 @@ const Reviews = () => {
             <p className="text-lg font-medium w-full lg:w-6/12 mb-10 mt-5 leading-[22px]">
                 I developed products that are more than pretty. I make them shippable and usable.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Masonry
+                breakpointCols={{
+                    default: 3,
+                    1200: 3,
+                    1000: 2,
+                    700: 1
+                }}
+                className="my-masonry-grid"
+                columnClassName="my-masonry-grid_column">
                 {data.map(rating => (
                     <div key={rating.id} className="bg-zinc-50 dark:bg-zinc-900 rounded-lg p-7 border-zinc-100
                     dark:border-zinc-800">
@@ -46,7 +56,7 @@ const Reviews = () => {
                         </p>
                     </div>
                 ))}
-            </div>
+            </Masonry>
         </SectionWrapper>
     )
 }
